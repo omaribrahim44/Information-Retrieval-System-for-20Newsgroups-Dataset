@@ -1,6 +1,6 @@
-# Information Retrieval Project - Enhanced with BM25
+# Information Retrieval System for 20 Newsgroups Dataset
 
-This project implements and compares three information retrieval models on the 20 Newsgroups dataset:
+A comprehensive information retrieval system implementing and comparing three retrieval models on the 20 Newsgroups dataset:
 - **Vector Space Model (VSM)** with TF-IDF
 - **BM25** (Best Matching 25) - Probabilistic ranking
 - **Boolean Retrieval** with soft matching
@@ -8,238 +8,199 @@ This project implements and compares three information retrieval models on the 2
 ## ⚡ Quick Start
 
 ```bash
-# 1. Clone the repository
+# Clone the repository
 git clone https://github.com/omaribrahim44/Information-Retrieval-System-for-20Newsgroups-Dataset.git
 cd Information-Retrieval-System-for-20Newsgroups-Dataset
 
-# 2. Install dependencies
+# Install dependencies
 pip install -r requirements.txt
 
-# 3. Download NLTK data
+# Download NLTK data
 python -c "import nltk; nltk.download('wordnet'); nltk.download('omw-1.4')"
 
-# 4. Launch Jupyter Notebook
+# Launch Jupyter Notebook
 jupyter notebook
-
-# 5. Open "IR PROJECT.ipynb" and run all cells (Cell → Run All)
 ```
+
+Then open `IR PROJECT.ipynb` and run all cells (`Cell` → `Run All`)
 
 ## 📋 Features
 
 ### Retrieval Models
-- ✅ Vector Space Model with TF-IDF and cosine similarity
-- ✅ BM25 implementation with configurable parameters (k1, b)
-- ✅ Boolean retrieval with AND/OR/NOT operators and soft matching fallback
+- Vector Space Model with TF-IDF and cosine similarity
+- BM25 implementation with configurable parameters (k1=1.5, b=0.75)
+- Boolean retrieval with AND/OR/NOT operators and soft matching fallback
 
-### Evaluation & Analysis
-- ✅ Comprehensive evaluation framework
-  - Precision@k (k=5, 10, 20)
-  - Recall@k (k=5, 10, 20)
-  - Average Precision (AP)
-  - Mean Average Precision (MAP)
-- ✅ Per-category performance analysis
-- ✅ Failure analysis (queries with AP < 0.2)
-- ✅ Query length impact analysis
+### Evaluation Metrics
+- Precision@k (k=5, 10, 20)
+- Recall@k (k=5, 10, 20)
+- Average Precision (AP)
+- Mean Average Precision (MAP)
+
+### Analysis
+- Per-category performance analysis
+- Failure analysis (queries with AP < 0.2)
+- Query length impact analysis
 
 ### Visualizations
-- ✅ Precision@k comparison plots
-- ✅ Recall@k comparison plots
-- ✅ MAP comparison bar charts
-- ✅ Per-category performance visualizations
+- Precision@k comparison plots
+- Recall@k comparison plots
+- MAP comparison bar charts
 
-### Export & Reporting
-- ✅ Detailed CSV exports of all metrics
-- ✅ Aggregated results summaries
-- ✅ Automated markdown report generation
-- ✅ High-resolution plots (300 DPI)
+### Export
+- Detailed CSV exports of all metrics
+- Aggregated results summaries
+- Automated markdown report generation
+- High-resolution plots (300 DPI)
 
-## 🚀 Getting Started
+## 🚀 Installation
 
 ### Prerequisites
+- Python 3.7 or higher
+- pip package installer
 
-- **Python**: Version 3.7 or higher
-- **pip**: Python package installer
-- **Jupyter Notebook**: For running the notebook
-
-### Installation
-
-#### Step 1: Clone the Repository
+### Step 1: Clone the Repository
 ```bash
 git clone https://github.com/omaribrahim44/Information-Retrieval-System-for-20Newsgroups-Dataset.git
 cd Information-Retrieval-System-for-20Newsgroups-Dataset
 ```
 
-#### Step 2: Install Required Packages
+### Step 2: Install Required Packages
 ```bash
 pip install -r requirements.txt
 ```
 
-This will install:
+This installs:
 - `numpy` - Numerical computing
-- `pandas` - Data manipulation and analysis
-- `scikit-learn` - Machine learning library (includes TF-IDF, cosine similarity)
-- `nltk` - Natural Language Toolkit (text preprocessing)
-- `matplotlib` - Plotting and visualization
+- `pandas` - Data manipulation
+- `scikit-learn` - Machine learning (TF-IDF, cosine similarity)
+- `nltk` - Natural language processing
+- `matplotlib` - Visualization
 - `wordcloud` - Word cloud generation
-- `jupyter` - Jupyter Notebook environment
+- `jupyter` - Notebook environment
 
-#### Step 3: Download NLTK Data
-The notebook requires NLTK's WordNet lemmatizer. Download it by running:
-
+### Step 3: Download NLTK Data
 ```bash
 python -c "import nltk; nltk.download('wordnet'); nltk.download('omw-1.4')"
 ```
 
-Or run this in a Python shell:
-```python
-import nltk
-nltk.download('wordnet')
-nltk.download('omw-1.4')
-```
+## 📖 Usage
 
 ### Running the Notebook
 
-1. **Start Jupyter Notebook**:
+1. **Start Jupyter**:
    ```bash
    jupyter notebook
    ```
 
-2. **Open the notebook**:
-   - Navigate to `IR PROJECT.ipynb` in the Jupyter interface
-   - Click to open
+2. **Open the notebook**: Click on `IR PROJECT.ipynb`
 
-3. **Run all cells**:
-   - Option 1: Click `Cell` → `Run All` in the menu
-   - Option 2: Run cells sequentially using `Shift + Enter`
-   
-   **Important**: Run cells in order from top to bottom!
-   - Cells 1-43: Setup, preprocessing, and basic retrieval
-   - Cells 44-70: BM25 implementation and enhanced analysis
+3. **Run all cells**: `Cell` → `Run All` (or `Shift + Enter` for each cell)
 
-4. **View results**:
-   - Check visualizations in `ir_outputs/plots/`
-   - Review CSV files in `ir_outputs/`
-   - Read the summary report: `ir_outputs/evaluation_report.md`
+### Notebook Structure
 
-### Expected Runtime
+- **Cells 1-43**: Data loading, preprocessing, and basic retrieval models
+- **Cells 44-70**: BM25 implementation and comprehensive analysis
 
-- **Full notebook execution**: ~5-10 minutes
-- **BM25 evaluation** (Cell 52): ~2-3 minutes
-- **Visualization generation**: ~10-15 seconds
+⚠️ **Important**: Run cells sequentially from top to bottom!
+
+### Viewing Results
+
+After running the notebook, results are saved in `ir_outputs/`:
+- `evaluation_detailed.csv` - Per-query metrics
+- `evaluation_summary.csv` - Aggregated metrics
+- `category_performance.csv` - Per-category analysis
+- `evaluation_report.md` - Summary report
+- `plots/` - Visualization images
 
 ## 📊 Dataset
 
-**20 Newsgroups Dataset** - 5 selected categories:
+**20 Newsgroups Dataset** - 5 categories:
 - `alt.atheism`
 - `comp.graphics`
 - `rec.sport.baseball`
 - `sci.med`
 - `talk.politics.misc`
 
-Total documents: 4,531
+**Total documents**: 4,531  
+**Download**: Automatic on first run (~14 MB)
 
 ## 📁 Project Structure
 
 ```
 .
-├── IR PROJECT.ipynb              # Main Jupyter notebook
-├── README.md                     # This file
-├── .gitignore                    # Git ignore rules
-├── Infor Retrieval Final project report.pdf
-├── Information retrieval project.pdf
-└── ir_outputs/                  # Generated results (created when run)
-    ├── evaluation_detailed.csv
-    ├── evaluation_summary.csv
-    ├── category_performance.csv
-    ├── map_scores.csv
-    ├── evaluation_report.md
-    └── plots/
-        ├── precision_comparison.png
-        ├── recall_comparison.png
-        └── map_comparison.png
+├── IR PROJECT.ipynb       # Main Jupyter notebook
+├── README.md              # This file
+├── requirements.txt       # Python dependencies
+├── .gitignore             # Git ignore rules
+└── ir_outputs/            # Generated results (created when run)
+    ├── *.csv              # Evaluation metrics
+    ├── *.md               # Reports
+    └── plots/             # Visualization plots
 ```
 
-## 🔍 Key Components
+## ⏱️ Expected Runtime
 
-### BM25 Implementation
+- **Full notebook**: ~5-10 minutes
+- **BM25 evaluation**: ~2-3 minutes
+- **Visualizations**: ~10-15 seconds
+- **First run**: Longer due to dataset download
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+**`ModuleNotFoundError: No module named 'sklearn'`**
+```bash
+pip install scikit-learn
+```
+
+**`LookupError: Resource wordnet not found`**
+```bash
+python -c "import nltk; nltk.download('wordnet'); nltk.download('omw-1.4')"
+```
+
+**`NameError: name 'evaluation_queries' is not defined`**
+- Solution: Run all cells from the beginning (cells 1-43 must run first)
+
+**Plots not displaying**
+```bash
+pip install matplotlib
+```
+
+### Performance Tips
+- Close other applications to free memory
+- Requires ~500 MB RAM
+- First run downloads dataset automatically
+
+## 🔍 Key Implementation Details
+
+### BM25 Scoring
 ```python
 def bm25_score(query_terms, doc_id, k1=1.5, b=0.75):
-    # Computes BM25 score with:
-    # - Term frequency saturation (k1)
-    # - Document length normalization (b)
-    # - IDF with smoothing
+    # Term frequency saturation (k1)
+    # Document length normalization (b)
+    # IDF with smoothing
 ```
 
 ### Evaluation Framework
 ```python
 def evaluate_all_models(queries, relevant_docs, k_values=[5, 10, 20]):
     # Evaluates VSM, BM25, and Boolean retrieval
-    # Returns DataFrame with all metrics
+    # Returns DataFrame with comprehensive metrics
 ```
 
 ## 📈 Results
 
-The notebook generates comprehensive results including:
-- **Performance Metrics**: Precision, Recall, AP, MAP for all models
-- **Visualizations**: Comparison plots showing model performance
-- **Analysis**: Per-category breakdown, failure analysis, query length impact
-- **Reports**: Automated markdown summary with key findings
-
-## 📚 Documentation
-
-All documentation is included in the Jupyter notebook with detailed markdown cells explaining each section.
-
-
-
-## 📝 Important Notes
-
-- ⚠️ **Run cells sequentially**: The notebook must be run from top to bottom
-- ⚠️ **Prerequisites required**: Cells 1-43 must be executed before cells 44-70
-- ⏱️ **Evaluation time**: The comprehensive evaluation (Cell 52) takes ~2-3 minutes
-- 💾 **Output location**: All results are saved to `ir_outputs/` directory
-- 📊 **Dataset download**: The 20 Newsgroups dataset (~14 MB) downloads automatically on first run
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-**Issue**: `ModuleNotFoundError: No module named 'sklearn'`
-```bash
-# Solution: Install scikit-learn
-pip install scikit-learn
-```
-
-**Issue**: `LookupError: Resource wordnet not found`
-```python
-# Solution: Download NLTK data
-import nltk
-nltk.download('wordnet')
-nltk.download('omw-1.4')
-```
-
-**Issue**: `NameError: name 'evaluation_queries' is not defined`
-```
-Solution: Run all cells from the beginning (cells 1-43 first)
-```
-
-**Issue**: Plots not displaying
-```bash
-# Solution: Ensure matplotlib is installed
-pip install matplotlib
-# If using Jupyter, add this to a cell:
-%matplotlib inline
-```
-
-### Performance Tips
-
-- Close other applications to free up memory
-- The dataset requires ~500 MB RAM
-- Evaluation of 50 queries processes ~4,500 documents each
-- First run takes longer due to dataset download
+The notebook generates:
+- **Metrics**: Precision, Recall, AP, MAP for all three models
+- **Plots**: Performance comparison visualizations
+- **Analysis**: Category breakdown, failure analysis, query length impact
+- **Reports**: Automated markdown summaries
 
 ## 🎓 Academic Context
 
-This project was developed as part of an Information Retrieval course, demonstrating:
+Developed for an Information Retrieval course, demonstrating:
 - Classical IR models (VSM, Boolean)
 - Modern probabilistic ranking (BM25)
 - Comprehensive evaluation methodologies
@@ -255,4 +216,5 @@ This is an academic project. For questions or suggestions, please open an issue.
 
 ---
 
+**Repository**: https://github.com/omaribrahim44/Information-Retrieval-System-for-20Newsgroups-Dataset  
 **Last Updated**: December 2, 2024
