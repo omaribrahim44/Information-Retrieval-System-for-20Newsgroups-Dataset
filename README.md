@@ -217,4 +217,4 @@ This is an academic project. For questions or suggestions, please open an issue.
 ---
 
 **Repository**: https://github.com/omaribrahim44/Information-Retrieval-System-for-20Newsgroups-Dataset  
-**Last Updated**: December 2, 2024
+
