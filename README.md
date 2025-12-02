@@ -9,20 +9,20 @@ This project implements and compares three information retrieval models on the 2
 
 ```bash
 # 1. Clone the repository
-git clone <your-repo-url>
-cd <repo-name>
+git clone https://github.com/omaribrahim44/Information-Retrieval-System-for-20Newsgroups-Dataset.git
+cd Information-Retrieval-System-for-20Newsgroups-Dataset
 
 # 2. Install dependencies
 pip install -r requirements.txt
 
-# 3. Download NLTK data (in Python)
+# 3. Download NLTK data
 python -c "import nltk; nltk.download('wordnet'); nltk.download('omw-1.4')"
 
-# 4. Start Jupyter and run the notebook
-jupyter notebook "IR PROJECT.ipynb"
-```
+# 4. Launch Jupyter Notebook
+jupyter notebook
 
-Then in Jupyter: `Cell` → `Run All`
+# 5. Open "IR PROJECT.ipynb" and run all cells (Cell → Run All)
+```
 
 ## 📋 Features
 
@@ -57,44 +57,45 @@ Then in Jupyter: `Cell` → `Run All`
 
 ### Prerequisites
 
-**Python Version**: Python 3.7 or higher
+- **Python**: Version 3.7 or higher
+- **pip**: Python package installer
+- **Jupyter Notebook**: For running the notebook
 
-**Required Packages**:
+### Installation
+
+#### Step 1: Clone the Repository
 ```bash
-pip install numpy pandas scikit-learn nltk matplotlib wordcloud jupyter
+git clone https://github.com/omaribrahim44/Information-Retrieval-System-for-20Newsgroups-Dataset.git
+cd Information-Retrieval-System-for-20Newsgroups-Dataset
 ```
 
-**Or install all at once**:
+#### Step 2: Install Required Packages
 ```bash
 pip install -r requirements.txt
 ```
 
-**Download NLTK Data** (required for text preprocessing):
+This will install:
+- `numpy` - Numerical computing
+- `pandas` - Data manipulation and analysis
+- `scikit-learn` - Machine learning library (includes TF-IDF, cosine similarity)
+- `nltk` - Natural Language Toolkit (text preprocessing)
+- `matplotlib` - Plotting and visualization
+- `wordcloud` - Word cloud generation
+- `jupyter` - Jupyter Notebook environment
+
+#### Step 3: Download NLTK Data
+The notebook requires NLTK's WordNet lemmatizer. Download it by running:
+
+```bash
+python -c "import nltk; nltk.download('wordnet'); nltk.download('omw-1.4')"
+```
+
+Or run this in a Python shell:
 ```python
 import nltk
 nltk.download('wordnet')
 nltk.download('omw-1.4')
 ```
-
-### Installation Steps
-
-1. **Clone the repository**:
-   ```bash
-   git clone <your-repo-url>
-   cd <repo-name>
-   ```
-
-2. **Install dependencies**:
-   ```bash
-   pip install numpy pandas scikit-learn nltk matplotlib wordcloud jupyter
-   ```
-
-3. **Download NLTK data** (run in Python):
-   ```python
-   import nltk
-   nltk.download('wordnet')
-   nltk.download('omw-1.4')
-   ```
 
 ### Running the Notebook
 
